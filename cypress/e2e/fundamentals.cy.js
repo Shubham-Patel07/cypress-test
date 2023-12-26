@@ -1,7 +1,14 @@
 describe('fundamentals test ', () => {
   it('Find the content "type"', () => {
-    cy.visit('http://localhost:3000/fundamentals')
+    cy.visit('https://example.cypress.io')
 
-    cy.contains('beforeEach')
+    cy.contains('type').click()
+
+    cy.url().should('include', '/commands/actions')
+
+    cy.get('.action-email').type('fake@email.com')
+
+    cy.get('.action-email').should('have.value', 'fake@email.com')
+
   })
 })
