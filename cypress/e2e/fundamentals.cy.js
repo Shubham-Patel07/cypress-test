@@ -1,6 +1,6 @@
 describe('fundamentals test ', () => {
   it('Find the content "type"', () => {
-    cy.visit('https://example.cypress.io')
+    cy.visit('/')
 
     cy.contains('type').click()
 
